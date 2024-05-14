@@ -1,15 +1,9 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "/model_training.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/model_training.py"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "/model_training.py",
+      "use": "@vercel/python"
+    }
+  ]
+}
