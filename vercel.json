@@ -4,7 +4,7 @@
     {
       "src": "api/model_training.py",
       "use": "@vercel/python",
-      "builds": { "maxLambdaSize": "15mb", "runtime": "python3.11.0" }
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.0" }
     }
   ],
   "routes": [
