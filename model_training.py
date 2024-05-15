@@ -6,7 +6,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
@@ -59,18 +58,6 @@ def predict():
     best_accuracy = accuracies[best_model]
     print("Best Model:", best_model)
     print("Best Accuracy:", best_accuracy)
-
-    # Plot accuracies
-    plt.figure(figsize=(10, 6))
-    plt.bar(accuracies.keys(), accuracies.values(), color='skyblue')
-    plt.xlabel('Model')
-    plt.ylabel('Accuracy')
-    plt.title('Accuracy of Different Models')
-    plt.ylim(0, 1)
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.savefig('accuracies.png')  # Save the plot as an image
-    plt.close()
 
     return jsonify({
         "predictions": predictions,
