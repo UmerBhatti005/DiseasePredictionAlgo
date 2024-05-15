@@ -91,7 +91,7 @@ import matplotlib.pyplot as plt
 app = Flask(__name__)
 
 # Load dataset
-data = pd.read_csv("MediCure_BigDataSet.csv")
+data = pd.read_csv("data/MediCure_BigDataSet.csv")
 
 X = data.drop(columns=['Disease'])
 y = data['Disease']
